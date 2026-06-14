@@ -304,23 +304,16 @@ h2 { font-size: 2.5rem; color: var(--dark-color); margin-bottom: 15px; }
 }
 
 #lang-select {
-    background-color: var(--light-color, #f7fafc); /* Utilise votre variable ou un gris clair par défaut */
-    color: var(--primary-color, #1b4d3e);         /* Utilise votre vert foncé */
+    background-color: var(--light-color, #f7fafc);
+    color: var(--primary-color, #1b4d3e);
     border: 1px solid #e2e8f0;
     padding: 6px 12px;
-    border-radius: 20px; /* Donne l'effet capsule arrondi */
+    border-radius: 20px;
     font-weight: 600;
     font-size: 0.85rem;
     outline: none;
     cursor: pointer;
-    transition: var(--transition, all 0.3s ease);
 }
-
-#lang-select:hover {
-    border-color: var(--secondary-color, #2e8b57);
-    background-color: var(--white, #ffffff);
-}
-
 /* Alignement pour les smartphones */
 @media (max-width: 768px) {
     .lang-switcher {
