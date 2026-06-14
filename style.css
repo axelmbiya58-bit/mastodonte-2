@@ -1,0 +1,330 @@
+:root {
+    --primary-color: #1b4d3e;
+    --secondary-color: #2e8b57;
+    --dark-color: #1a202c;
+    --light-color: #f7fafc;
+    --text-color: #4a5568;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+html { scroll-behavior: smooth; }
+body { color: var(--text-color); line-height: 1.6; background-color: var(--white); }
+
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+.section-padding { padding: 80px 0; }
+.bg-light { background-color: var(--light-color); }
+.bg-dark { background-color: var(--dark-color); }
+.text-white { color: var(--white); }
+
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-tag { display: inline-block; color: var(--secondary-color); font-weight: bold; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 10px; }
+h2 { font-size: 2.5rem; color: var(--dark-color); margin-bottom: 15px; }
+
+.btn { display: inline-block; padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: var(--transition); cursor: pointer; }
+.btn-primary { background-color: var(--secondary-color); color: var(--white); border: none; }
+.btn-primary:hover { background-color: var(--primary-color); }
+.btn-secondary { background-color: transparent; color: var(--white); border: 2px solid var(--white); margin-left: 15px; }
+.btn-secondary:hover { background-color: var(--white); color: var(--dark-color); }
+.btn-block { width: 100%; text-align: center; }
+
+/* Navigation */
+.navbar { background-color: white; position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.nav-container { display: flex; justify-content: space-between; align-items: center; height: 80px; width: 90%; max-width: 1200px; margin: 0 auto; }
+.nav-logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); text-decoration: none; }
+.nav-logo span { color: var(--secondary-color); }
+.nav-menu { display: flex; list-style: none; align-items: center; }
+.nav-link { color: var(--text-color); text-decoration: none; padding: 10px 20px; font-weight: 500; transition: var(--transition); }
+.nav-link:hover, .nav-link.active { color: var(--secondary-color); }
+.btn-nav { background-color: var(--primary-color); color: var(--white) !important; border-radius: 20px; padding: 8px 20px; }
+
+/* Hero Section (Fixe) */
+.hero-section {
+    height: 130vh;
+    background: linear-gradient(rgba(27, 77, 62, 0.8), rgba(26, 32, 44, 0.85)), url('pictures/image\ 8.jpeg') no-repeat center center/cover;
+    display: flex; align-items: center; color: var(--white); padding-top: 80px;
+}
+.hero-content { max-width: 800px; width: 90%; margin: 0 auto; }
+.hero-section h1 { font-size: 3.5rem; margin: 20px 0; }
+.hero-section h1 span { color: var(--secondary-color); }
+.hero-subtitle { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 3px; color: var(--secondary-color); font-weight: 600; }
+
+/* Stats & Timeline */
+.stats-grid { display: flex; gap: 20px; margin-top: 30px; }
+.stat-card { background: var(--light-color); padding: 20px; border-radius: 10px; border-left: 4px solid var(--secondary-color); width: 100%; }
+.timeline { border-left: 3px solid var(--secondary-color); padding-left: 20px; margin-bottom: 30px; }
+.timeline-item { position: relative; margin-bottom: 20px; }
+.timeline-item::before { content: ''; position: absolute; left: -27px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--secondary-color); }
+
+/* --- LE CARROUSEL SOUS 2025 --- */
+.about-slider-container {
+    width: 100%;
+    height: 400px; /* Ajuste la hauteur de la boîte ici */
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+.about-slider { width: 100%; height: 100%; position: relative; background: #e2e8f0; }
+.about-slider .about-slide {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;
+}
+/* Style spécial appliqué par JavaScript pour montrer l'image active */
+.about-slider .about-slide.active { opacity: 1; z-index: 2; }
+
+/* Autres Sections */
+.card { background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); text-align: center; }
+.card-icon { font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px; }
+.zone-box { background: var(--light-color); padding: 25px; border-radius: 8px; text-align: center; }
+.zone-box i { font-size: 2rem; color: var(--secondary-color); margin-bottom: 10px; }
+
+/* Formulaire */
+.bank-details { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; margin: 20px 0; border: 1px dashed rgba(255,255,255,0.2); }
+.contact-form { background: var(--white); padding: 30px; border-radius: 12px; }
+.form-group { margin-bottom: 15px; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px; outline: none; }
+
+.footer { background: #111622; text-align: center; padding: 20px; color: rgba(255,255,255,0.4); font-size: 0.9rem; }
+.menu-toggle { display: none; cursor: pointer; }
+
+@media (max-width: 768px) {
+    .nav-menu { position: absolute; top: 80px; left: -100%; flex-direction: column; background: white; width: 100%; box-shadow: 0 10px 10px rgba(0,0,0,0.05); }
+    .nav-menu.active { left: 0; }
+    .menu-toggle { display: block; }
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* --- Menu Mobile Rapide --- */
+.menu-toggle { display: none; cursor: pointer; }
+.bar { display: block; width: 25px; height: 3px; margin: 5px auto; transition: var(--transition); background-color: var(--dark-color); }
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: absolute; top: 80px; left: -100%; flex-direction: column;
+        background-color: var(--white); width: 100%; text-align: center; transition: 0.3s; box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+    }
+    .nav-menu.active { left: 0; }
+    .nav-menu li { margin: 15px 0; }
+    .menu-toggle { display: block; }
+    .hero-section h1 { font-size: 2.3rem; }
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* === NOUVEAU CSS POUR LE RENDU "WHAT WE DO" === */
+
+/* 1. Conteneur principal (Grille de 3 colonnes) */
+.mission-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 colonnes responsives */
+    gap: 30px; /* Espace entre les cartes */
+    padding: 20px 0;
+}
+
+/* 2. Structure de base d'une carte */
+.mission-card {
+    height: 450px; /* Hauteur des cartes */
+    border-radius: 20px; /* Coins arrondis style "What we do" */
+    overflow: hidden; /* Pour que le filtre sombre respecte les coins arrondis */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Nécessaire pour le calque de filtre */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Effet de survol (zoom léger) */
+.mission-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 3. Attribution des images de fond aux cartes */
+/* REMPLACEZ 'chemin_vers_image.jpg' par vos vrais fichiers images */
+.card-vision {
+    background-image: url('pictures/image\ vision.jpg'); 
+}
+
+.card-mission {
+    background-image: url('pictures/notre\ mission.jpeg');
+}
+
+.card-valeurs {
+    background-image: url('pictures/Nos\ valeurs.jpeg');
+}
+
+/* 4. Le calque sombre transparent (Overlay) qui rend le texte lisible */
+.card-overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)); /* Dégradé sombre */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    text-align: center;
+    padding: 30px;
+    color: #ffffff; /* Tout le texte devient blanc */
+}
+
+/* 5. Style des icônes rondes blanches */
+.card-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px); /* Léger effet de flou behind l'icône */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* 6. Titres H3 et paragraphes dans les cartes */
+.card-overlay h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card-overlay p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   RENDU CARTOGRAPHIQUE : NOS ZONES D'INTERVENTION
+   ========================================================================== */
+
+.zones-cards-container {
+    margin-top: 30px;
+}
+
+/* Base de la carte avec l'image géographique */
+.zone-card-bg {
+    height: 320px;               /* Hauteur adaptée pour les zones d'intervention */
+    border-radius: 16px;         /* Coins arrondis élégants */
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+    transition: var(--transition);
+    position: relative;
+}
+
+/* Effet de survol */
+.zone-card-bg:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* --- ADRESSE DES IMAGES DE CARTES (À adapter avec vos fichiers) --- */
+.zone-katanga {
+    background-image: url('pictures/carte\ haut\ ktg.jpg');
+}
+
+.zone-lualaba {
+    background-image: url('pictures/lualaba\ carte.webp');
+}
+
+.zone-lomami {
+    background-image: url('pictures/haut\ lomami\ carte.jfif');
+}
+
+
+.zone-tanganyika {
+    background-image: url('pictures/carte\ tanga\ jaune.jpg');
+}
+
+/* Le filtre transparent appliqué sur la carte géographique */
+/* Note : On utilise ici un dégradé du blanc vers le vert foncé/sombre pour garder de la fraîcheur */
+.zone-overlay {
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    transition: var(--transition);
+}
+
+/* Optionnel : Si vous préférez un fond sombre classique pour faire ressortir le texte en blanc au survol */
+.zone-card-bg:hover .zone-overlay {
+    background: linear-gradient(rgba(26, 32, 44, 0.8), rgba(26, 32, 44, 0.95));
+}
+
+/* Gestion dynamique de la couleur du texte lors du survol */
+.zone-card-bg h3, .zone-card-bg .zone-icon {
+    color: var(--primary-color); /* Vert foncé d'origine */
+    transition: var(--transition);
+}
+.zone-card-bg p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: var(--transition);
+}
+
+/* Quand on survole la carte, tout le texte passe au blanc lumineux */
+.zone-card-bg:hover h3, 
+.zone-card-bg:hover p, 
+.zone-card-bg:hover .zone-icon {
+    color: var(--white);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Style de l'icône de zone */
+.zone-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.zone-overlay h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* --- STYLE DU SÉLECTEUR DE LANGUE --- */
+.lang-switcher {
+    margin-left: 20px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+#lang-select {
+    background-color: var(--light-color, #f7fafc); /* Utilise votre variable ou un gris clair par défaut */
+    color: var(--primary-color, #1b4d3e);         /* Utilise votre vert foncé */
+    border: 1px solid #e2e8f0;
+    padding: 6px 12px;
+    border-radius: 20px; /* Donne l'effet capsule arrondi */
+    font-weight: 600;
+    font-size: 0.85rem;
+    outline: none;
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+}
+
+#lang-select:hover {
+    border-color: var(--secondary-color, #2e8b57);
+    background-color: var(--white, #ffffff);
+}
+
+/* Alignement pour les smartphones */
+@media (max-width: 768px) {
+    .lang-switcher {
+        margin: 15px 0;
+        justify-content: center;
+    }
+}
