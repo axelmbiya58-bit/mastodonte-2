@@ -85,16 +85,16 @@ h2 { font-size: 2.5rem; color: var(--dark-color); margin-bottom: 15px; }
 .zone-box i { font-size: 2rem; color: var(--secondary-color); margin-bottom: 10px; }
 
 /* Formulaire */
-.bank-details { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; margin: 20px 0; border: 1px dashed rgba(255,255,255,0.2); }
+.bank-details { background: rgba(255, 255, 255, 0.096); padding: 15px; border-radius: 8px; margin: 20px 0; border: 1px dashed rgba(190, 161, 30, 0.021); }
 .contact-form { background: var(--white); padding: 30px; border-radius: 12px; }
 .form-group { margin-bottom: 15px; }
-.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px; outline: none; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #0d4c9e25; border-radius: 6px; outline: none; }
 
 .footer { background: #111622; text-align: center; padding: 20px; color: rgba(255,255,255,0.4); font-size: 0.9rem; }
 .menu-toggle { display: none; cursor: pointer; }
 
 @media (max-width: 768px) {
-    .nav-menu { position: absolute; top: 80px; left: -100%; flex-direction: column; background: white; width: 100%; box-shadow: 0 10px 10px rgba(0,0,0,0.05); }
+    .nav-menu { position: absolute; top: 80px; left: -100%; flex-direction: column; background: white; width: 100%; box-shadow: 0 10px 10px rgba(248, 244, 244, 0.027); }
     .nav-menu.active { left: 0; }
     .menu-toggle { display: block; }
     .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
@@ -144,9 +144,9 @@ h2 { font-size: 2.5rem; color: var(--dark-color); margin-bottom: 15px; }
 }
 
 /* 3. Attribution des images de fond aux cartes */
-/* REMPLACEZ 'chemin_vers_image.jpg' par vos vrais fichiers images */
+
 .card-vision {
-    background-image: url('pictures/image\ vision.jpg'); 
+    background-image: url('pictures/notre\ vision.jpeg'); 
 }
 
 .card-mission {
@@ -154,7 +154,7 @@ h2 { font-size: 2.5rem; color: var(--dark-color); margin-bottom: 15px; }
 }
 
 .card-valeurs {
-    background-image: url('pictures/Nos\ valeurs.jpeg');
+    background-image: url('pictures/valeurs.jpeg');
 }
 
 /* 4. Le calque sombre transparent (Overlay) qui rend le texte lisible */
@@ -320,4 +320,8 @@ h2 { font-size: 2.5rem; color: var(--dark-color); margin-bottom: 15px; }
         margin: 15px 0;
         justify-content: center;
     }
+}
+
+.contact-info {
+     color: #ffffff;
 }
