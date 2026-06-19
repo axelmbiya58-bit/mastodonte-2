@@ -3,192 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenue | O.N.G. LES COLLEGIENS MASTODONTES</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    
-    <style>
-        /* À AJOUTER DANS LE BLOC <style> */
-        .welcome-title {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 2.2rem;
-            color: #ffffff;
-            text-align: center;
-            margin-bottom: -10px; /* Rapproche le texte du logo */
-            letter-spacing: 1px;
-        }
-        
-        /* Réinitialisation de base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Fond dégradé vert forêt comme sur ta photo */
-        body {
-            background: linear-gradient(135deg, #163a2e 0%, #0b1d17 100%);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff;
-            padding: 20px;
-            font-family: 'Poppins', sans-serif;
-            overflow: hidden;
-        }
-
-        /* Conteneur principal vertical */
-        .main-wrapper {
-            max-width: 1000px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-        }
-
-        /* Grille à 3 colonnes pour aligner : Texte Gauche | Logo Centré | Texte Droite */
-        .brand-grid {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-            width: 100%;
-            gap: 20px;
-        }
-
-        /* Style des textes latéraux en jolis petits caractères */
-        .side-text {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.25rem;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 280px;
-        }
-
-        .text-left {
-            text-align: right;
-            justify-self: end;
-        }
-
-        .text-right {
-            text-align: left;
-            justify-self: start;
-        }
-
-        /* Zone de l'image du logo */
-        .logo-box {
-            max-width: 260px; /* Taille parfaite pour laisser de la place aux côtés */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo-box img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
-
-        /* Conteneur des boutons d'aiguillage */
-        .buttons-container {
-            width: 100%;
-            max-width: 440px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        /* Style général des boutons arrondis */
-        .gate-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 13px 24px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        /* Bouton version Française (Vert opaque) */
-        .btn-fr {
-            background-color: #2e8b57;
-            color: #ffffff;
-            box-shadow: 0 4px 12px rgba(46, 139, 87, 0.2);
-        }
-
-        .btn-fr:hover {
-            background-color: #256f45;
-            transform: translateY(-2px);
-        }
-
-        /* Bouton version Anglaise (Transparent bordure blanche) */
-        .btn-en {
-            background-color: transparent;
-            border-color: #ffffff;
-            color: #ffffff;
-        }
-
-        .btn-en:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-        }
-
-        /* Responsive : Si l'écran est petit, tout s'empile proprement */
-        @media (max-width: 768px) {
-            .brand-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 30px;
-            }
-            .side-text {
-                text-align: center !important;
-                justify-self: center !important;
-                font-size: 1.1rem;
-            }
-            .logo-box {
-                order: -1; /* Le logo passe au-dessus sur téléphone */
-            }
-        }
-    </style>
+    <title>C.S.F.G.F MASTODONTES | ONGD Environnementale</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="main-wrapper">
-        <h1 class="welcome-title">Welcome to</h1>
-        <div class="brand-grid">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fa-solid fa-earth-africa"></i> C.S.F.G.F <span>MASTODONTES</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#a-propos" class="nav-link">À Propos</a></li>
+                <li><a href="#missions" class="nav-link">Missions & Valeurs</a></li>
+                <li><a href="#zones" class="nav-link">Nos Zones</a></li>
+                <li><a href="#contact" class="nav-link btn-nav">Nous Soutenir</a></li>
+               <li class="lang-switcher">
+                    <select id="lang-select" onchange="window.location.href=this.value;">
+                        <option value="index.html" selected>FR</option>
+                        <option value="en.html">EN</option>
+                    </select>
+               </li>
+            </ul>
             
-            <div class="side-text text-left">
-                Les collegiens sans frontières pour les générations futures
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
+        </div>
+    </nav>
 
-            <div class="logo-box">
-                <img src="pictures/logo 1.jpeg" alt="Logo ONGD Mastodontes">
+    <header class="hero-section">
+       <div class="container hero-container">
+        
+            <div class="hero-logo-box">
+                <img src="pictures/logo1.jpeg" alt="CSFGF Mastodontes" class="hero-img">
             </div>
-
-            <div class="side-text text-right">
-                Mastodons without border for future generations
+            
+            <div class="hero-content">
+                <h1 class="hero-title"><span>LES COLLEGIENS SANS FRONTIERE POUR LES GENERATIONS FUTURES</span></h1>
+                <p class="hero-subtitle">Association sans but lucratif</p>
+                
+                <div class="hero-buttons">
+                    <a href="#missions" class="btn btn-primary">Découvrir nos missions</a>
+                    <a href="#contact" class="btn btn-primary">Nous Soutenir</a>
+                </div>
             </div>
 
         </div>
+    </header>
 
-        <div class="buttons-container">
-            <a href="home.html" class="gate-btn btn-fr">
-                O.N.G. Les Collegiens Mastodontes (Site FR) <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="en.html" class="gate-btn btn-en">
-                <i class="fa-solid fa-globe"></i> O.N.G. Mastodons without border for future generations (WebSite EN)  <i class="fa-solid fa-arrow-right"></i>
-            </a>
+    <section id="a-propos" class="section-padding">
+        <div class="container">
+            <div class="grid-2">
+                
+                <div class="about-text">
+                    <span class="section-tag">Qui sommes-nous ?</span>
+                    <h2>Notre Histoire & Notre Engagement</h2>
+                    <p>Fondée en 2019, l'ONGD <strong>CSFGF MASTODONTES</strong> (Les Collégiens Sans Frontière pour les Générations Futures) est passée d'une dynamique citoyenne locale à une institutionnalisation consolidée, officiellement reconnue par le Ministère de l'Environnement et Développement Durable (Certificat n°119/DRCE/SG/EDD/2025).</p>
+                    <p>Nous encadrons les jeunes, les étudiants et les communautés locales pour apporter des réponses concrètes aux urgences climatiques et préserver nos écosystèmes fragiles.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>300K</h3>
+                            <p>Objectif Plants (Horizon 2026)</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>46</h3>
+                            <p>Membres Actifs Engagés</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>2019</h4>
+                            <p>Création de l'organisation et structuration interne.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2024</h4>
+                            <p>Lancement de la pépinière pilote à Hewa Bora (15 000 plants).</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>2025</h4>
+                            <p>Reconnaissance légale et homologation officielle par l'État.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-slider-container">
+                        <div class="about-slider">
+                            <img src="pictures/image 1.jpeg" alt="Photo terrain 1" class="about-slide active">
+                            <img src="pictures/image 2.jpeg" alt="Photo terrain 2" class="about-slide">
+                            <img src="pictures/image 3.jpeg" alt="Photo terrain 3" class="about-slide">
+                            <img src="pictures/image 4.jpg" alt="Photo terrain 4" class="about-slide">
+                            <img src="pictures/image 5.jpeg" alt="Photo terrain 5" class="about-slide">
+                            <img src="pictures/image 6.jpeg" alt="Photo terrain 6" class="about-slide">
+                            <img src="pictures/image 7.jpeg" alt="Photo terrain 7" class="about-slide">
+                            <img src="pictures/image 9.jpeg" alt="Photo terrain 7" class="about-slide">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
+    </section>
 
+    <section id="missions" class="section bg-light">
+    <div class="container">
+        <div class="section-header">
+             <span class="section-tag">Fondations</span>
+             <h2>Vision, Mission & Valeurs</h2>
+        </div>
+        <div class="mission-cards-container">
+            
+            <div class="mission-card card-vision">
+                <div class="card-overlay">
+                    <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Notre Vision</h3>
+                    <p>Une société congolaise résiliente et éco-responsable, où la jeunesse mène des actions durables pour contrer les perturbations climatiques.</p>
+                </div>
+            </div>
+
+            <div class="mission-card card-mission">
+                <div class="card-overlay">
+                    <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>Notre Mission</h3>
+                    <p>Régénérer les écosystèmes, lutter contre la déforestation, éradiquer l'insalubrité urbaine et promouvoir les "Écoles Vertes".</p>
+                </div>
+            </div>
+
+            <div class="mission-card card-valeurs">
+                <div class="card-overlay">
+                    <div class="card-icon"><i class="fa-solid fa-hands-holding"></i></div>
+                    <h3>Nos Valeurs</h3>
+                    <p>Intégrité, transparence absolue, respect envers nos partenaires, solidarité communautaire et éthique éco-citoyenne.</p>
+                </div>
+            </div>
+
+        </div> </div>
+    </section>
+
+    <section id="zones" class="section-padding bg-light">
+    <div class="container">
+        
+        <div class="section-header">
+            <span class="section-tag">Sur le terrain</span>
+            <h2>Nos Zones d'Intervention</h2>
+        </div>
+        
+        <div class="grid-4 zones-cards-container">
+            
+            <div class="zone-card-bg zone-katanga">
+                <div class="zone-overlay">
+                    <div class="zone-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <h3>Haut-Katanga</h3>
+                    <p>Lubumbashi (Siège), Likasi, Kipushi, Kasumbalesa, Sakania.</p>
+                </div>
+            </div>
+
+            <div class="zone-card-bg zone-lualaba">
+                <div class="zone-overlay">
+                    <div class="zone-icon"><i class="fa-solid fa-mountain-city"></i></div>
+                    <h3>Lualaba</h3>
+                    <p>Kolwezi et les territoires à forte influence minière.</p>
+                </div>
+            </div>
+
+            <div class="zone-card-bg zone-lomami">
+                <div class="zone-overlay">
+                    <div class="zone-icon"><i class="fa-solid fa-tree"></i></div>
+                    <h3>Haut-Lomami</h3>
+                    <p>Kamina et ses zones rurales d'interventions agricoles.</p>
+                </div>
+            </div>
+
+            <div class="zone-card-bg zone-tanganyika">
+                <div class="zone-overlay">
+                    <div class="zone-icon"><i class="fa-solid fa-water"></i></div>
+                    <h3>Tanganyika</h3>
+                    <p>Kalemie et les interventions le long du bassin lacustre.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
+</section>
 
+    
+</section>
+    </section>
+
+    <section id="contact" class="section-padding bg-dark">
+        <div class="container">
+            <div class="grid-2">
+                <div class="contact-info">
+                    <span class="section-tag text-white">Agir Ensemble</span>
+                    <h2 class="text-white">Soutenir l'ONGD Mastodontes</h2>
+                    <p>Que vous soyez un bailleur international, une entreprise locale ou un citoyen désireux de devenir bénévole, votre contribution compte.</p>
+                    <div class="bank-details">
+                        <h4><i class="fa-solid fa-building-columns"></i> Coordonnées Bancaires (RAWBANK)</h4>
+                        <p><strong>Intitulé :</strong> CSFGF MASTODONTES</p>
+                        <p><strong>Compte :</strong> 05130 - 01171568001 - 42</p>
+                    </div>
+                    <div class="info-list">
+                        <p><i class="fa-solid fa-location-dot"></i> 32, ave Industrielle, Kampemba, Lubumbashi</p>
+                        <p><i class="fa-solid fa-phone"></i> +243 992 066 004</p>
+                        <p><i class="fa-solid fa-envelope"></i> contact.drc@mastodontes.org</p>
+                        <p><i class="fa-solid fa-envelope"></i> contact.zam@mastodontes.org</p>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form id="ongd-form" class="contact-form">
+                        <h3>Contactez-nous via WhatsApp</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Votre Nom ou Organisation" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Votre Adresse Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="subject">
+                                <option value="devenir-partenaire">Devenir Partenaire Financier</option>
+                                <option value="devenir-bénévole">Devenir Volontaire sur le terrain</option>
+                                <option value="autre">Demande d'adhésion</option>
+                                <option value="autre">Demande d'information</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Envoyer sur WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 CSFGF MASTODONTES. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
