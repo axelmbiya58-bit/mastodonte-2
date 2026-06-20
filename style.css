@@ -64,8 +64,10 @@ h2 { font-size: 2.5rem; color: var(--dark-color); margin-bottom: 15px; }
 /* Encadré de l'image pour couper le grand espace blanc du bas */
 .hero-logo-box {
     width: 100%;
-    max-width: 800px; /* Ajuste cette taille pour agrandir ou rétrécir le mammouth */
-    height: 320px;    /* Coupe l'image juste en dessous des mains noires */
+    max-width: 800px; /*  agrandir ou rétrécir le mammouth */
+    height: auto;   /* laisse la hauteur s'adapter */
+    aspect-ratio: 800 /320;
+
     overflow: hidden; /* Cache le reste du blanc de l'image */
     display: flex;
     justify-content: center;
@@ -76,7 +78,7 @@ h2 { font-size: 2.5rem; color: var(--dark-color); margin-bottom: 15px; }
 .hero-img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: block;
 }
 
 /* Bloc des écrits placé juste après */
